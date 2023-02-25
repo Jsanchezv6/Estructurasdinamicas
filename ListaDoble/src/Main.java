@@ -31,19 +31,23 @@ public class Main {
                     System.out.println("Tamaño de la lista es de: "+lista.size());
                     break;
                 case 6:
-                    System.out.println("la lista se encuentra: " + lista.isEmpety());
+                    if (lista.isEmpety() != true){
+                        System.out.println("Estado: Con Datos");
+                    }else {
+                        System.out.println("Estado: Vacia");
+                    }
                     break;
                 case 7:
                     System.out.println("Numero de indice a buscar");
                     int numero = n.nextInt();
                     int numeroRestado = numero - 1;
-                    System.out.println("Valor buscada es: " + lista.searchIndex(numeroRestado));
+                    System.out.println("Valor buscado : " + lista.searchIndex(numeroRestado));
                     break;
                 case 8:
                     //revisar
                     System.out.println("El valor a buscar");
                     String valorbusqueda = n.next();
-                    System.out.println("El valor buscado esta en el indice : " + lista.searchValor(valorbusqueda));
+                    System.out.println("Valor buscada esta el indice: " + lista.searchValor(valorbusqueda));
                     break;
                 case 9:
                     System.out.println("Ingrese el numero de indice para borrar: ");
@@ -64,8 +68,8 @@ public class Main {
         System.out.println("3. Recorrer hacia adelante");
         System.out.println("4. Recorrer hacia atras");
         System.out.println("5. Mostrar tamaño de la lista");
-        System.out.println("6. Mostrar si la lsita esta vacia");
-        System.out.println("7. Buscar elemento por indece");
+        System.out.println("6. Mostrar si la lista esta");
+        System.out.println("7. Buscar elemento por indice");
         System.out.println("8. Buscar elemento por valor");
         System.out.println("9. Borrar elemento con indece");
         System.out.println("10. Salir");
